@@ -190,7 +190,7 @@ export default function ChatWidget() {
       <button
         id="chat-widget-trigger"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 bg-[#F0EDE4] shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+        className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 bg-[#F0EDE4] border border-[#E5E5E5] shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
       >
         {isOpen ? (
           <X size={18} className="text-[#0A0A0A]" />

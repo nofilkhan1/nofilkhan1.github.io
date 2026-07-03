@@ -44,19 +44,33 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
+          <div className={`hidden md:flex items-center rounded-md overflow-hidden border ${
+            theme === 'dark' ? 'border-[#2A2A2A]' : 'border-[#E5E5E5]'
+          }`}>
+            <button
+              onClick={toggle}
+              className="w-9 h-9 flex items-center justify-center transition-all duration-150 hover:bg-[#1C1C20]"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+            </button>
+            <div className={`w-px h-5 ${theme === 'dark' ? 'bg-[#2A2A2A]' : 'bg-[#E5E5E5]'}`} />
+            <a
+              href="mailto:nofilkhan251@gmail.com"
+              className="px-4 h-9 flex items-center text-xs font-semibold uppercase tracking-wider transition-all duration-150 hover:bg-[#1C1C20]"
+            >
+              Hire Me
+            </a>
+          </div>
           <button
             onClick={toggle}
-            className="w-9 h-9 flex items-center justify-center rounded-md border transition-all duration-150 hover:scale-105"
+            className={`md:hidden w-9 h-9 flex items-center justify-center rounded-md border transition-all duration-150 hover:scale-105 ${
+              theme === 'dark' ? 'border-[#2A2A2A]' : 'border-[#E5E5E5]'
+            }`}
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
           </button>
-          <a
-            href="mailto:nofilkhan251@gmail.com"
-            className="hidden md:inline-flex px-4 py-2 text-xs font-semibold uppercase tracking-wider border rounded-md transition-all duration-150 hover:scale-105"
-          >
-            Hire Me
-          </a>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden w-9 h-9 flex items-center justify-center"
