@@ -9,14 +9,14 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="contact" className="py-24 px-6 text-center">
+    <section id="contact" className="py-32 px-6 text-center">
       <div className="max-w-3xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4 }}
         >
-          <p className={`font-mono text-xs uppercase tracking-[0.2em] mb-4 ${
+          <p className={`font-mono text-sm uppercase tracking-[0.2em] mb-4 ${
             theme === 'dark' ? 'text-[#666]' : 'text-[#888]'
           }`}>
             {'// reach_out()'}
@@ -24,7 +24,7 @@ export default function Contact() {
           <h2 className={`font-mono text-3xl md:text-4xl font-bold mb-2 ${
             theme === 'dark' ? 'text-[#FAFAFA]' : 'text-[#0A0A0A]'
           }`}>
-            Let us talk.
+            Let's talk.
           </h2>
           <div className={`w-10 h-0.5 mx-auto mb-8 ${
             theme === 'dark' ? 'bg-[#333]' : 'bg-[#CCC]'

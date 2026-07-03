@@ -89,7 +89,7 @@ export default function Journey() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="journey" className={`py-24 px-6 ${
+    <section id="journey" className={`py-28 px-6 ${
       theme === 'dark' ? 'bg-[#111115]' : 'bg-[#F5F5F5]'
     }`}>
       <div className="max-w-3xl mx-auto" ref={ref}>
@@ -98,7 +98,7 @@ export default function Journey() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4 }}
         >
-          <p className={`font-mono text-xs uppercase tracking-[0.2em] mb-4 ${
+          <p className={`font-mono text-sm uppercase tracking-[0.2em] mb-4 ${
             theme === 'dark' ? 'text-[#666]' : 'text-[#888]'
           }`}>
             {'// journey.log'}

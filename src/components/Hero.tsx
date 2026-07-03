@@ -50,10 +50,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative px-6"
+      className="min-h-screen flex items-center justify-center relative px-6 py-20"
     >
       <div className="text-center max-w-3xl">
-        <p className="font-mono text-sm mb-4">
+        <p className="font-mono text-base mb-4">
           <span className={theme === 'dark' ? 'text-[#888]' : 'text-[#666]'}>
             {'> '}
           </span>
@@ -123,8 +123,8 @@ export default function Hero() {
       </div>
 
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.2em] ${
-          theme === 'dark' ? 'text-[#555]' : 'text-[#999]'
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-xs uppercase tracking-[0.2em] ${
+          theme === 'dark' ? 'text-[#888]' : 'text-[#666]'
         }`}
       >
         scroll

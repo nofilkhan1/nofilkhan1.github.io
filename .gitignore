@@ -30,3 +30,4 @@ index - Copy.html
 .env
 .env.local
 .env.*.local
+.env

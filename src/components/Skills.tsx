@@ -14,7 +14,7 @@ export default function Skills() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="skills" className={`py-24 overflow-hidden ${
+    <section id="skills" className={`py-20 overflow-hidden ${
       theme === 'dark' ? 'bg-[#111115]' : 'bg-[#F5F5F5]'
     }`}>
       <div className="max-w-5xl mx-auto px-6 mb-12" ref={ref}>
@@ -23,7 +23,7 @@ export default function Skills() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4 }}
         >
-          <p className={`font-mono text-xs uppercase tracking-[0.2em] mb-4 ${
+          <p className={`font-mono text-sm uppercase tracking-[0.2em] mb-4 ${
             theme === 'dark' ? 'text-[#666]' : 'text-[#888]'
           }`}>
             {'// skills.h'}

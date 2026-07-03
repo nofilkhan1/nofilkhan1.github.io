@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 import { MessageCircle, X, Send } from 'lucide-react'
 
-const GROQ_API_KEY = 'REDACTED_API_KEY_2'
+const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || ''
 
 const SYSTEM_PROMPT = `You are the portfolio assistant for Nofil Khan, a software developer and builder. Answer questions about him directly and concisely in 2 to 4 sentences. Never use bullet points. Write in clear, professional English with personality. Be confident and direct, never robotic. Never mention any university name unless the visitor specifically asks where he studies.
 
@@ -123,9 +123,7 @@ export default function ChatWidget() {
             }`}
             style={{ boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}
           >
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-[#2A2A2A]"
-              style={{ background: '#F0EDE4' }}
-            >
+            <div className="flex items-center gap-3 px-4 py-3 border-b border-[#2A2A2A] bg-[#F0EDE4]">
               <div className="w-7 h-7 rounded-full bg-[#0A0A0A] flex items-center justify-center text-xs">
                 🤖
               </div>
@@ -180,8 +178,7 @@ export default function ChatWidget() {
               <button
                 onClick={() => sendMessage()}
                 disabled={isLoading || !input.trim()}
-                className="w-9 h-9 rounded-lg flex items-center justify-center transition-all disabled:opacity-30"
-                style={{ background: '#F0EDE4' }}
+                className="w-9 h-9 rounded-lg flex items-center justify-center transition-all disabled:opacity-30 bg-[#F0EDE4]"
               >
                 <Send size={13} className="text-[#0A0A0A]" />
               </button>
@@ -193,11 +190,7 @@ export default function ChatWidget() {
       <button
         id="chat-widget-trigger"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
-        style={{
-          background: '#F0EDE4',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-        }}
+        className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 bg-[#F0EDE4] shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
       >
         {isOpen ? (
           <X size={18} className="text-[#0A0A0A]" />

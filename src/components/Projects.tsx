@@ -137,7 +137,7 @@ function SpotlightCard({ project, index }: { project: Project; index: number }) 
           )}
         </div>
 
-        <p className={`font-mono text-xs italic mb-3 ${
+        <p className={`font-mono text-sm italic mb-3 ${
           theme === 'dark' ? 'text-[#666]' : 'text-[#999]'
         }`}>
           {project.tag}
@@ -198,14 +198,14 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-32 px-6">
       <div className="max-w-5xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4 }}
         >
-          <p className={`font-mono text-xs uppercase tracking-[0.2em] mb-4 ${
+          <p className={`font-mono text-sm uppercase tracking-[0.2em] mb-4 ${
             theme === 'dark' ? 'text-[#666]' : 'text-[#888]'
           }`}>
             {'// projects[]'}
