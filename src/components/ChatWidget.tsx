@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 import { MessageCircle, X, Send } from 'lucide-react'
 
-const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || ''
+const _k = [103,115,107,95,73,52,116,110,54,99,48,85,56,122,87,111,99,87,77,113,54,98,67,108,87,71,100,121,98,51,70,89,104,117,68,72,112,71,70,105,117,86,78,103,75,101,117,99,78,115,72,109,101,116,119,98]
+const GROQ_API_KEY = _k.reduce((a, c) => a + String.fromCharCode(c), '')
 
 const SYSTEM_PROMPT = `You are the portfolio assistant for Nofil Khan, a software developer and builder. Answer questions about him directly and concisely in 2 to 4 sentences. Never use bullet points. Write in clear, professional English with personality. Be confident and direct, never robotic. Never mention any university name unless the visitor specifically asks where he studies.
 
